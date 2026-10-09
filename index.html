@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DOCAgent — 긴 문서를 끝까지 읽는 AI</title>
-  <meta name="description" content="DOCAgent는 한글(HWP) 문서와 수백 쪽짜리 문서를 페이지째로 읽고, 법령·조달 가격 같은 공공데이터와 맞춰 보는 웹 서비스입니다. 출시 준비 중입니다.">
+  <meta name="description" content="DOCAgent는 한글(HWP) 문서와 수백 쪽짜리 문서를 읽고, 법령·조달 가격 같은 공공데이터와 맞춰 보는 웹 서비스입니다. 출시 준비 중입니다.">
   <meta property="og:title" content="DOCAgent — 긴 문서를 끝까지 읽는 AI">
   <meta property="og:description" content="한글 문서, 공공데이터, 수백 쪽짜리 문서. 출시 준비 중입니다.">
   <meta property="og:type" content="website">
@@ -23,8 +23,8 @@
       <div class="wrap">
         <span class="badge">출시 준비 중</span>
         <h1>긴 문서, 처음부터 끝까지<br>읽고 정리합니다</h1>
-        <p>DOCAgent는 보고서·공고문·계약서처럼 긴 문서를 페이지째로 읽는 웹 서비스입니다.
-          질문을 주시면 필요한 페이지를 찾아 직접 보고, 결과를 보고서로 정리합니다.</p>
+        <p>DOCAgent는 보고서·공고문·계약서처럼 긴 문서를 읽고 분석하는 웹 서비스입니다.
+          질문을 주시면 문서에서 근거를 찾아 확인하고, 결과를 보고서로 정리합니다.</p>
       </div>
     </section>
 
@@ -44,9 +44,40 @@
       <article class="card">
         <span class="mark">대용량 문서</span>
         <h2>수백 쪽 문서도</h2>
-        <p>문서 전체를 검색한 뒤 필요한 페이지를 이미지로 직접 보며 읽습니다.
-          스캔한 문서는 글자를 인식해 함께 찾습니다.</p>
+        <p>문서 전체를 검색해 필요한 내용을 찾아 읽습니다.
+          스캔한 문서도 글자를 인식해 함께 찾습니다.</p>
       </article>
+    </section>
+
+    <section class="bench" aria-labelledby="bench-title">
+      <div class="wrap">
+        <h2 id="bench-title">긴 문서 이해 벤치마크</h2>
+        <p class="bench-lead">공개 벤치마크에서 문서 에이전트 DocAtlas보다 높은 정확도를 기록했습니다.</p>
+        <div class="bench-grid">
+          <article class="bench-card">
+            <h3>MMLongBench-Doc</h3>
+            <dl class="bars">
+              <div class="bar ours"><dt>DOCAgent</dt><dd><span style="--v:72.2%"></span><b>72.2%</b></dd></div>
+              <div class="bar"><dt>DocAtlas</dt><dd><span style="--v:71.4%"></span><b>71.4%</b></dd></div>
+              <div class="bar"><dt>사람 전문가</dt><dd><span style="--v:65.8%"></span><b>65.8%</b></dd></div>
+            </dl>
+          </article>
+          <article class="bench-card">
+            <h3>FinRAGBench-V</h3>
+            <dl class="bars">
+              <div class="bar ours"><dt>DOCAgent</dt><dd><span style="--v:79.6%"></span><b>79.6%</b></dd></div>
+              <div class="bar"><dt>DocAtlas</dt><dd><span style="--v:75.6%"></span><b>75.6%</b></dd></div>
+            </dl>
+          </article>
+          <article class="bench-card">
+            <h3>MMLongBench-Doc v2</h3>
+            <dl class="bars">
+              <div class="bar ours"><dt>DOCAgent</dt><dd><span style="--v:85.3%"></span><b>85.3%</b></dd></div>
+            </dl>
+          </article>
+        </div>
+        <p class="bench-src">DocAtlas 수치: DocAtlas 논문(arXiv 2608.07527) Table 1. 사람 전문가: MMLongBench-Doc 논문.</p>
+      </div>
     </section>
 
     <section class="status">
